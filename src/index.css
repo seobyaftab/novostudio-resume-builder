@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+/* Print Rules for 100% Vector Lossless PDF Generation */
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-page {
+    width: 210mm !important;
+    min-height: 297mm !important;
+    max-height: 297mm !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* Custom font utilities */
+.font-ubuntu { font-family: 'Ubuntu', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.font-raleway { font-family: 'Raleway', sans-serif; }
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+.font-merriweather { font-family: 'Merriweather', serif; }
+.font-nunito { font-family: 'Nunito', sans-serif; }
+.font-opensans { font-family: 'Open Sans', sans-serif; }
+.font-overpass { font-family: 'Overpass', sans-serif; }
+.font-quicksand { font-family: 'Quicksand', sans-serif; }
+.font-inter { font-family: 'Inter', sans-serif; }
